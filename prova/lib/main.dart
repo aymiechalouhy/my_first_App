@@ -24,26 +24,29 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text("Helloo, Hellooo ya halaaa")),
-        body: Center(
-          child: Container(
-          height: 250,
-          width: 250,
-          color: Colors.blue,        
-          child: const Center(
-            child: Text("Thank you ",
-                style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold)),
+        
+        body: Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly, children:[
+          
+          Container(
+            height:100,
+            width:100,
+            color:Colors.blue,
           ),
-        )),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-           print("button clicked");
-          },
-          child: const Icon(Icons.access_alarm_outlined),)
+           Container(
+            height:100,
+            width:100,
+            color:Colors.blue,
+          ),
+           Container(
+            height:100,
+            width:100,
+            color:Colors.blue,
+          ),
+        ],
+        )
         
         );
+
 
 
   }
