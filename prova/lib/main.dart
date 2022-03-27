@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prova/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: "First App",
-      home: HomePage(),
+      home:HomePage2(),
     );
   }
 }
@@ -24,7 +25,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text("Helloo, Hellooo ya halaaa")),
-        
+        backgroundColor: Colors.black12,
         body: Column( mainAxisAlignment: MainAxisAlignment.spaceEvenly, children:[
           
           Container(
@@ -46,9 +47,6 @@ class HomePage extends StatelessWidget {
         )
         
         );
-
-
-
   }
 }
 // Scaffold 3nda background white
