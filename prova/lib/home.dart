@@ -1,4 +1,6 @@
+import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+import 'package:prova/input.dart';
 
 class HomePage2 extends StatefulWidget {
   const HomePage2({Key? key}) : super(key: key);
@@ -15,18 +17,32 @@ class _HomePage2State extends State<HomePage2> {
       appBar: AppBar(
         title: const Text("Counter"),
       ),
-      body: Center(
-        child: Text(
-        "$count",
-         style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-      )),
-      floatingActionButton: FloatingActionButton(
+      body: Column(children: [
+        const SizedBox(height: 20),
+        Center(
+            child: Text(
+          "$count",
+          style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        )),
+        FloatingActionButton(
+            onPressed: () {
+              setState(() {
+                count = count + 1;
+              });
+            },
+            child: const Icon(Icons.plus_one)),
+        const SizedBox(
+          height: 25,
+        ),
+        MaterialButton(
           onPressed: () {
-            setState(() {
-              count = count + 1;
-            });
+            Get.to(() =>const InputScreen());
           },
-          child: const Icon(Icons.plus_one)),
+          child: const Text("Input"),
+          color: Colors.blue,
+          textColor: Colors.white,
+        )
+      ]),
     );
   }
 }
